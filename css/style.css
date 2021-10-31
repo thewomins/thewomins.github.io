@@ -1,0 +1,149 @@
+:root{
+    --azul_bold : hsl(233, 47%, 7%);
+    --negro : hsl(0, 0%, 3%);
+    --verde : hsl(73, 64%, 61%);
+    --blanco : hsl(0, 0%, 100%);
+    --plomoSuave : hsla(0, 5%, 85%, 0.75);
+    --verdeOscuro : hsla(133, 44%, 19%, 0.75);
+    --verdeClaro : hsla(133, 38%, 55%, 0.75);
+   }
+
+body{
+font-family: 'Inter', sans-serif;
+margin: 0px;
+background-color: var(--negro);
+color:white;
+font-size: 16px;
+}
+
+.contenedor{
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--azul_bold);
+    padding: 4%;
+}
+
+.caja_about{
+    margin-right: 2%;
+    align-items: center;
+    text-align: center;
+}
+
+.caja_about span{
+    color: var(--verde);
+}
+
+.caja_about_interior_numeros{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+}
+
+.caja_resena{
+    margin-left: 2%;
+}
+
+.caja_datos_persona{
+    background-color: var(--verdeOscuro);
+    border-radius: 10px;
+    padding: 4%;
+    
+}
+
+.caja_datos_persona p{
+    color: var(--plomoSuave);
+}
+
+.caja_persona{
+    display: flex;
+    flex-direction: row;
+}
+
+.caja_persona img{
+    border-radius: 50%;
+    height: 60px;
+    width: auto;
+}
+
+.caja_datos{
+    margin: 0;
+    margin-left: 5%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+
+.span_cargo{
+    color: var(--plomoSuave);
+    
+}
+
+.span_nombre{
+    color: var(--blanco);
+    font-weight: 800;
+}
+
+.caja_valoracion{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--verdeClaro);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    align-items: center;
+}
+
+.caja_valoracion span{
+    font-weight: 800;
+}
+
+.caja_correo{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.caja_correo input{
+    border-radius: 10px;
+    width: 69%;
+    padding: 2%;  
+}
+.caja_correo button{
+    margin-left: 2%;
+    width: 29%;
+    background-color: var(--verde);
+    border-radius: 10px;
+}
+
+@media
+screen and (min-width: 240px) and (max-width: 920px){
+    .contenedor{
+        margin: 5% 5%;
+        flex-direction: column;
+    }
+    .caja_about_interior_numeros{
+        flex-direction: column;
+        align-content: space-around;
+        margin-bottom: 5%;
+    }
+    .caja_about_interior_numeros h1{
+        margin: 0%;
+        margin-top: 5%;
+    }
+    .caja_about_interior_numeros p{
+        margin: 0%;
+    }
+    .caja_valoracion{
+        flex-direction: row;
+    }
+    .caja_valoracion span{
+        margin-left: 15px;
+    }
+    
+}
