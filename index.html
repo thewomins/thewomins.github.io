@@ -1,64 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="caja_about">
-            <h1>Get <span>insights</span> that help your business grow</h1>
-            <p>Discober the benefits of data analytics and make better decisions regarding revenue, 
-                customer experience, 
-                and overall eddiciency.</p>
-            <div class= "caja_about_interior_numeros">
-                <div>
-                    <h1>10k+</h1>
-                    <P>COMPANIES</P>
-                </div>
-                <div>
-                    <h1>666+</h1>
-                    <P>TEMPLATES</P>
-                </div>
-                <div>
-                    <h1>22M+</h1>
-                    <P>QUERIES</P>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="caja_resena">
-            <div class="caja_datos_persona">
-                <div class="caja_persona">
-                    <img src="images/image-anne.jpg" alt="">
-                    <div class="caja_datos">
-                        <span class="span_nombre">Anne Wallace</span>
-                        <span class="span_cargo">Frontend Developer</span>
-                    </div>
-                </div>
-                <p>We only provide grat products combined with excelent customer service. 
-                    See what our satisfied customers are saying about out services</p>
-            </div>
-            <div class="caja_valoracion">
-                <div>
-                    <img src="images/icon-star.svg" alt="">
-                    <img src="images/icon-star.svg" alt="">
-                    <img src="images/icon-star.svg" alt="">
-                    <img src="images/icon-star.svg" alt="">
-                    <img src="images/icon-star.svg" alt="">
-                </div>
-                <span>Rated 5 Stars in develop apps</span>
-            </div>
-            <div class="caja_correo">
-                <input type="email" placeholder="email">
-                <button>Send</button>
-            </div>
+    <div class="top_menu">
+        <div class="top_menu_container">
+           <!-- <a href="#about"> home</a>
+            <a href="#lenguajes"> lenguajes</a>
+            <a href="#proyectos"> proyectos</a> -->
         </div>
     </div>
+
+    <div class="top_about" id="about">
+        <div class="top_about_container">
+            <h1 class="center_text">Hola, soy Felipe. Un gusto concerte.</h1>
+            <P class="center_text">Estoy recien terminando mi carrera profesional 
+                por lo cual no poseo mucha experinecia en el campo  
+                pero si eh desarrollado un par de aplicaciones que mas 
+                abajo en la pagina puedes revisar.
+                soy curioso, apasionado por la tecnologia y continuamente trabajando 
+                para mejorar mis habilidades.</P>
+        </div>
+    </div>
+
+    <div class="caja_lenguajes" id="lenguajes">
+        <h1 class="center_text ">Tecnologias que manejo</h1>
+        <p class="center_text linea">Esta son las tecnologias y lenguajes de programación de los que poseo conocimiento.</p>
+        <p class="center_text linea" ><b>Python<br>C<br>C++<br>HTML CSS JavaScript<br>Java<br>SQL</b></p>
+    </div>   
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span id="span_close" class="close" onclick="cerrar()">&times;</span>
+            <h1 class="center_text"></h1>
+            <img>
+            <p class="center_text"></p>
+            <div class="modal_contenido_links">
+                <h3 class="center_text" ><a></a></h3>
+                <h3 class="center_text"><a></a></h3>
+            </div>
+        </div>  
+    </div>
+
+    <div class="contenedor_proyectos">
+        <h1 class="center_text">Trabajos</h1>
+        <div class= "container_card">
+            <div class="card" onclick="modal(0)">
+                <img src="images/captura_prog1.jpg">
+                <div class="container center_text">
+                    <h4><b>Administración crypto</b></h4>
+                    <a href= "https://github.com/thewomins/Administrar-crypto-" target="_blank" >Git Hub</a>
+                </div>
+            </div>
+            <div class="card" onclick="modal(1)">
+                <img src="images/captura_prog2.jpg">
+                <div class="container center_text">
+                    <h4><b>Promedio ponderado</b></h4>
+                    <a href= "https://github.com/thewomins/promedios" target="_blank" >Git Hub</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/captura_prog3.png">
+                <div class="container center_text">
+                    <h4><b>¡Esta página!</b></h4>
+                    <a href= "https://github.com/thewomins/thewomins.github.io" target="_blank" >Git Hub</a>
+                </div>
+            </div>
+        </div>
+        <!--<div class= "container_card" onclick="modal(3)">
+            <div class="card">
+                <img src="https://i.imgur.com/7D7I6dI.png">
+                <div class="container center_text">
+                    <h4><b>John Doe</b></h4>
+                    <p>Architect & Engineer</p>
+                </div>
+            </div>
+        </div>-->
+    </div>
+        
+    <div class="end">
+        <h2 class="center_text">Redes</h2>
+        <div class="redes_img_container">
+            <a href= "https://github.com/thewomins" target="_blank" ><img src="images/GitHub-Mark-32px.png"></a>
+            <a href= "mailto:thewomins@gmail.com" target="_blank"><img src="https://img.icons8.com/color/32/000000/gmail--v1.png"/></a>
+        </div>
+    </div>
+
 
 </body>
