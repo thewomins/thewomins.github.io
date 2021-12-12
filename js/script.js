@@ -48,7 +48,7 @@ function datos(){
     modal_content=[
         {
             h1 : "Administración crypto",
-            img : "images/captura_prog1.jpg",
+            img : "images/captura_prog1.JPG",
             p: "Programa realizado para tener control sobre las inversiones en crypto monedas. realizado en <b>Python</b> y su interfaz grafica con la libreria <b>Tkinter</b>",
             a: "Git Hub",
             link: "https://github.com/thewomins/Administrar-crypto-"
