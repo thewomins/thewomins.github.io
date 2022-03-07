@@ -190,7 +190,6 @@ body{
   
   #grid_proyectos{
     width: 70%;
-    overflow: visible;
     display: grid;
     grid-template-columns: repeat(3,32.3%);
     grid-gap: 20px;
@@ -331,21 +330,28 @@ body{
     padding: 10px;
  }
 
-@media
-screen and (min-width: 240px) and (max-width: 720px){
+@media screen and (max-width: 720px){
     /*
     * seguir completando para vista movil
     */
+
+    .top_menu{
+      display: none;
+    }
+
+    .top_about{
+      margin-top: 0;
+  }
+
     .card{
       width: 80%;
       margin-bottom:8px;
       margin-top: 8px;
     }
 
-    .container_card{
-      width: 80%;
-      display: flex;
-      flex-direction: column;
+    #grid_proyectos{
+      width: fit-content;
+      grid-template-columns: auto;
     }
     
     .top_about_container{
@@ -356,4 +362,13 @@ screen and (min-width: 240px) and (max-width: 720px){
     .caja_lenguajes{
       width: 80%;
     }
+
+    .modal-contenido{
+      width: 90%; 
+  }
+
+    .redes_link_container{
+      grid-auto-flow: row;
+    }
+  
 }
