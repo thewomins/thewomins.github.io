@@ -8,6 +8,8 @@
     --verdeClaro : hsla(133, 38%, 55%, 0.75);
     --background-2:#FFD8E4;
     --primary_enphasis:#006974;
+    --color_arrow: hsl(0, 0%, 3%);
+    --card_background:aliceblue;
    }
 
    html, body {
@@ -127,6 +129,8 @@ body{
 
 .card {
     height: auto;
+    cursor: pointer;
+    display: grid;
     width: 97%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 3%;
@@ -134,7 +138,7 @@ body{
     margin-left:auto;
     margin-right:auto;
     border-radius: 5px; 
-    background-color:aliceblue;
+    background-color:var(--card_background);
   }
 
   .card img{
@@ -144,19 +148,44 @@ body{
     transition: object-fit 2s;
   }
 
-  .card:hover {
+  .card:hover{
     box-shadow: 0 16px 25px 0 rgba(0,0,0,0.2);
-    transform: scale(1.2);
-    transition: transform 2s;
+    transform: scale(1.05);
+    transition: transform 0.3s;
   }
+
+  .card:hover > .container p{
+    color: black;
+    transition: color 0.3s ease-in;
+  }
+
   .card img{
       width:100%;
       border-radius: 50%;
   }
   .card:hover img{
     border-radius: 5%;
-    transition: border-radius 2s;
+    transition: border-radius 1s;
 }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .container h4{
+    padding: 0;
+  }
+
+  .container p{
+    color: var(--card_background);
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: color 0.3s ease-out;
+  }
   
   #grid_proyectos{
     width: 70%;
