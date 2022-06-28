@@ -1,3 +1,10 @@
+document.getElementById("contenedor-arrow").addEventListener("click",e=>onclick_arrow())
+
+function onclick_arrow(){
+    console.log("cicku",screen.availHeight)
+    window.scrollBy(0, window.innerHeight-65);
+}
+
 function cerrar() {
     console.log("clickeaste X");
     var modal = document.getElementById("miModal");
