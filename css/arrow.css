@@ -5,7 +5,7 @@
     min-height: 45px;
     width:80%;
     z-index: 2;
-    margin: auto 0 0 0;
+    margin: auto 0 5px 0;
 }
 
 #contenedor-arrow:hover{
@@ -14,9 +14,9 @@
     z-index: 2;
 }
 
-#contenedor-arrow:hover + .top_about {
-    transform: translateY(-88px);
-    padding-top: 65px;
+#contenedor-arrow:hover + .contenedor_secundario {
+    transform: translateY(-93px);
+    padding-top:5px;
     transition: all 0.3s;
 }
 
