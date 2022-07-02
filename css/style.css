@@ -50,7 +50,7 @@ body {
   display: flex;
   width: 100%;
   min-height: 50px;
-  background-color: var(--terciary);
+  background-color: var(--primary-container);
   justify-content: flex-end;
   position: fixed;
   z-index: 3;
