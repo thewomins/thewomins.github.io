@@ -25,7 +25,7 @@
     margin: 18px 50px auto auto;
     height: 8px;
     width: 66px;
-    background-color: black;
+    background-color: var(--outline);
     transform: rotate(35deg);
     z-index: 2;
 }
@@ -35,7 +35,7 @@
     margin: 18px 0px auto 50px;
     height: 8px;
     width: 66px;
-    background-color: black;
+    background-color: var(--outline);
     transform: rotate(-35deg);
     z-index: 2;
 }
@@ -43,7 +43,6 @@
 #contenedor-arrow:hover #arrow,
 #contenedor-arrow:hover #arrow_l,
 #contenedor-arrow:hover #arrow_r {
-    background-color: yellow;
     transition: background-color 0.2s;
     z-index: 2;
 }
@@ -51,7 +50,7 @@
 #arrow {
     height: 8px;
     width: 100%;
-    background-color: black;
+    background-color: var(--outline);
     justify-content: center;
     border-radius: 0px 0px 8px 8px;
     z-index: 1;
@@ -62,7 +61,7 @@
     margin: auto auto 0px 16px;
     height: 60px;
     width: 60px;
-    background-color: red;
+    background-color: var(--primary);
     z-index: 2;
     transform: translateY(-36px) rotate(-35deg);
 }
@@ -72,7 +71,7 @@
     margin: auto 16px 0px auto;
     height: 60px;
     width: 60px;
-    background-color: red;
+    background-color: var(--primary);
     z-index: 2;
     transform: translateY(-36px) rotate(35deg);
 }
