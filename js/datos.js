@@ -17,7 +17,7 @@ const datos=[
     },
     {
         nombre_proyecto : "Sistema compra pasajes para trenes",
-        img : "images/tren.JPG",
+        img : "images/tren.PNG",
         lenguajes:["Python","Fast API","JavaScript","MongoDB"],
         descripcion: "Programa con una interfaz de usuario y administrador en la cual se pueden ingresar los datos de los recorridos a una base de datos de mongoDB a travez de una <b>API Rest</b> y en la cual un usuario puede comprar un pasaje en estos recorridos",
         link: {"Git Hub Frontend":"https://github.com/thewomins/Frontend_tren",
