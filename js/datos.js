@@ -15,7 +15,7 @@ const datos=[
         link: [{"Git Hub":"https://github.com/thewomins/promedios",
                 "icon":"images/icon_github.svg"},
                 {"Google play store":"https://play.google.com/store/apps/details?id=com.ominscorp.promedios",
-                "icon":"images/icon_github.svg"}]
+                "icon":"images/icon_google_play.png"}]
     },
     {
         nombre_proyecto : "Sistema compra pasajes para trenes",
