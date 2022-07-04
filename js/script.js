@@ -27,6 +27,7 @@ function iniciar_proyectos(){
         container_interior.querySelector("h3").textContent = element.nombre_proyecto
         container_interior.querySelector("p").innerHTML = element.descripcion
         container_interior.querySelector("img").src = element.img
+        container_interior.querySelector("img").className = "imagen-proyecto"
         container_interior.addEventListener("click",e=>onclick_proyecto(container_interior))
         let container_lenguajes = container_interior.querySelectorAll("div")[1]
         container_interior.className="container_interior_proyectos"
@@ -65,8 +66,8 @@ function onclick_proyecto(element){
         let img = document.createElement("img")
         let texto = document.createElement("p")
         button.className="container-boton-links"
-        button.addEventListener("click",e=>window.location.href = (Object.entries(e)[0][1]))
-        console.error(e)
+        console.warn(e[Object.keys(e)[0]])
+        button.addEventListener("click",event=>window.location.href = Object.entries(e)[0][1])
         img.src=Object.entries(e)[1][1]
         texto.textContent=Object.keys(e)[0]
         button.appendChild(img)
