@@ -3,8 +3,9 @@
     --secondary: #e9edc9;
     --terciary: #765a00;
     --primary-container: #d0ee82;
+    --primary-container-36: rgba(208, 238, 130,0.36);
     --secundary-container: #d9ec7b;
-    --terciary-container: #ffdf96;
+    --terciary-container: rgba(255, 223, 150, 0.36);
     --background: #f6fff1;
     --on-primary: #273500;
     --on-secondary: #2c3400;

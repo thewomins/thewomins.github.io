@@ -180,7 +180,7 @@ body {
 
 #lista_proyectos{
   min-height: 100px;
-  width: 70%;
+  width: 70vw;
   margin: 3% auto 0 15%;
 }
 
@@ -188,8 +188,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 40vh;
   max-height: 60vh;
-  width: 100%;
+  min-width: 70vw;
+  width: 70vw;
+  cursor: pointer;
 }
 
 .div-datos-proyectos{
@@ -252,6 +255,34 @@ body {
   box-shadow: 0px 0px 0px 0px var(--outline);
   filter:blur(1px);
   transition: all 0.6s;
+}
+
+.container-links{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  border-radius: 12px;
+  cursor: auto;
+  width:inherit;
+  background-color:var(--primary-container-36)
+}
+
+.container-boton-links{
+  margin:1%;
+  min-width: fit-content;
+  background-color: var(--terciary-container);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+}
+
+.container-boton-links:hover{
+  filter: saturate(3);
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 1px 1px 3px var(--outline);
 }
 
 .end {
