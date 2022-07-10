@@ -50,33 +50,33 @@ body {
   display: flex;
   width: 100%;
   min-height: 50px;
-  background-color: var(--primary-container);
+  background-color: var(--primary);
   justify-content: flex-end;
   position: fixed;
   z-index: 3;
-  box-shadow: 0 1px 2px var(--outline);
 }
 
 .top_menu_container {
   display: flex;
-  margin: auto 0 auto 0;
+  margin: 0 0 0 auto;
   padding: 0% 2% 0% 2%;
+  background-color: var(--primary);
   align-items: center;
   justify-content: center;
 }
 
 .top_menu_container a {
   display: flex;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 8px;
   margin: 0;
   text-decoration: none;
-  color: var(--on-primary-container);
+  color: var(--on-primary);
   font-size: 1.2em;
   font-weight: bold;
+  border-radius: 10px;
 }
 
-.top_menu_container a:hover {
+.top_menu_container a:hover  {
   background-color: var(--outline);
 }
 
