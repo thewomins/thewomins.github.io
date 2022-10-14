@@ -8,7 +8,6 @@ function App() {
     <div>
       <Menu />
       <Presentation />
-      <About />
     </div>
   );
 }
