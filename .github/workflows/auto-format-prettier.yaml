@@ -2,7 +2,7 @@ name: auto-format-prettier
 on: 
   pull_request:
     branches: 
-      - V3
+      - master
 jobs:
   format:
     # Check if the PR is not from a fork
