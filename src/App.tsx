@@ -5,8 +5,8 @@ import Presentation from "./Screens/Presentation";
 function App() {
   return (
     <div>
-      <Menu/>
-      <Presentation/>
+      <Menu />
+      <Presentation />
     </div>
   );
 }

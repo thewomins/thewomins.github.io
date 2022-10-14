@@ -1,57 +1,57 @@
-.chip{
-    display: flex;
-    height: 32px;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFFBFF;
-    border-radius: 8px;
-    border: 1px solid #79767E;
-    transition: all 0.3s ease-in-out;
+.chip {
+  display: flex;
+  height: 32px;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffbff;
+  border-radius: 8px;
+  border: 1px solid #79767e;
+  transition: all 0.3s ease-in-out;
 }
 
-.chip p{
-    width: auto;
-    margin: 0 16px 0 0;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
+.chip p {
+  width: auto;
+  margin: 0 16px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
-.image{
-    height: 18px;
-    aspect-ratio: 1 / 1;
-    margin: auto 8px;
+.image {
+  height: 18px;
+  aspect-ratio: 1 / 1;
+  margin: auto 8px;
 }
 
-.big{
-    height: 46px;
+.big {
+  height: 46px;
 }
 
-.big .image{
-    height: 32px;
-    aspect-ratio: 1 / 1;
-    margin: auto 8px;
+.big .image {
+  height: 32px;
+  aspect-ratio: 1 / 1;
+  margin: auto 8px;
 }
 
-.big p{
-    font-size: 1.37rem;
+.big p {
+  font-size: 1.37rem;
 }
 
 /* ONLY ICON */
 
-.noLabel{
-    background-color: transparent;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-out;
+.noLabel {
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-out;
 }
 
-.noLabel .image{
-    margin:0px 8px;
+.noLabel .image {
+  margin: 0px 8px;
 }
 
-.noLabel p{
-    font-size: 0;
-    margin: 0;
-    transition: all 0.3s ease-in-out;
+.noLabel p {
+  font-size: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
 }
