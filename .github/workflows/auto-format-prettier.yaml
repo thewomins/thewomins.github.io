@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v1
         with:
           ref: ${{ github.head_ref }}
+      - name: install-prettier
+        run: yarn npm install prettier
       - name: prettier
         run: yarn format
       - name: Check for modified files
