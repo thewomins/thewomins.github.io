@@ -1,0 +1,17 @@
+name: auto-format-prettier
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: install-prettier
+        run: yarn add prettier
+      - name: prettier
+        run: yarn prettier --check .
