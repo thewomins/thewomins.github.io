@@ -13,7 +13,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: install-prettier
-        run: yarn install prettier
+        run: yarn add prettier
       - name: prettier
         run: yarn format
       - name: Check for modified files
