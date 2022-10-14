@@ -1,7 +1,8 @@
 name: auto-format-prettier
 on: 
   pull_request:
-    branches: [v3]
+    branches: 
+      - V3
 jobs:
   format:
     # Check if the PR is not from a fork
