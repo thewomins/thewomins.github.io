@@ -1,7 +1,7 @@
 name: auto-format-prettier
-on: 
+on:
   pull_request:
-    branches: 
+    branches:
       - master
 jobs:
   format:
