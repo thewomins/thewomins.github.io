@@ -1,0 +1,14 @@
+.empresaContainer {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding: 0px 30px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-out;
+}
+
+.empresaContainerActive {
+  background-color: blue;
+  border-radius: 12px 0px 0px 12px;
+  transition: background-color 0.3s ease-in;
+}
