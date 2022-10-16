@@ -1,22 +1,22 @@
-.button{
-    display: flex;
-    height: 40px;
-    cursor: pointer;
-    padding-left: 16px;
-    padding-right: 24px;
-    gap:8px;
-    align-items: center;
-    background-color: transparent;
-    border-radius: 20px;
-    outline: 1px solid gray;
+.button {
+  display: flex;
+  height: 40px;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 24px;
+  gap: 8px;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  outline: 1px solid gray;
 }
 
 .image {
-    height: 18px;
-    aspect-ratio: 1 / 1;
-    background-color: red;
-  }
+  height: 18px;
+  aspect-ratio: 1 / 1;
+  background-color: red;
+}
 
-.primary{
-    background-color: brown;
+.primary {
+  background-color: brown;
 }

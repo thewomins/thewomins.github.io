@@ -3,12 +3,12 @@ import styles from "./Button.module.css";
 
 type props = {
   primary?: boolean;
-  icon?:any
+  icon?: any;
   text: string;
   onClick?: any;
 };
 
-const Button: React.FC<props> = ({primary = false, onClick, text,icon}) => {
+const Button: React.FC<props> = ({primary = false, onClick, text, icon}) => {
   return (
     <div
       className={`${styles.button} ${primary ? styles.primary : ""}`}
