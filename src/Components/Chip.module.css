@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   background-color: #fffbff;
+  padding-right: 16px;
   border-radius: 8px;
   border: 1px solid #79767e;
   transition: all 0.3s ease-in-out;
@@ -12,7 +13,7 @@
 
 .chip p {
   width: auto;
-  margin: 0 16px 0 0;
+  margin: 0;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
