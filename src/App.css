@@ -1,8 +1,80 @@
+:root {
+  --seed: #afa2e9;
+  --onSeed: #1b1b1f;
+  --primary: #355ab0;
+  --onPrimary: #ffffff;
+  --primaryContainer: #dae2ff;
+  --onPrimaryContainer: #001848;
+  --secundary: #585e71;
+  --onSecundary: #ffffff;
+  --secundaryContainer: #dce2f9;
+  --onSecundaryContainer: #151b2c;
+  --tertiary: #735471;
+  --onTertiaty: #ffffff;
+  --tertiaryContainer: #fed7f9;
+  --onTertiaryContainer: #2b122b;
+  --error: #ba1a1a;
+  --onError: #ffffff;
+  --errorContainer: #ffdad6;
+  --onErrorContainer: #410002;
+  --background: #fefbff;
+  --background2: #f9eefd;
+  --onBackground: #1b1b1f;
+  --surface: #fdf1fa;
+  --onSurface: #1b1b1f;
+  --outline: #757780;
+  --outlineVariant: rgba(255, 0, 0, 0.7);
+  --surfaceVariant: #e1e2ec;
+  --onSurfaceVariant: #45464f;
+  --shadow: #000000;
+  --opacityHover: rgba(0, 0, 0, 0.08);
+  --shadowTransparency: rgba(0, 0, 0, 0.25);
+  --shadowTransparencyHigh: rgba(0, 0, 0, 0.6);
+}
+
+#root {
+  background-color: var(--background);
+}
+
 .page {
-  background-color: aliceblue;
+  background-color: var(--background);
 }
 
 .titles {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
   margin: 0;
+  font-weight: bold;
+  color: var(--onBackground);
+}
+
+.titleContainer {
+  display: flex;
+  margin: 10px 30px;
+  gap: 20px;
+}
+
+.line {
+  height: 3px;
+  border-radius: 0px 2px 2px 0px;
+  background-color: var(--primary);
+  width: 30%;
+  max-width: 300px;
+  align-self: center;
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .titleContainer {
+    margin: 10px 5px;
+  }
+  .titles {
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
+    margin: 0px 5px;
+    font-weight: bold;
+    color: var(--onBackground);
+  }
 }
