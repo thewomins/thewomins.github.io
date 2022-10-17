@@ -1,0 +1,103 @@
+.container {
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--onPrimaryContainer);
+}
+
+.cardAbout {
+  display: flex;
+  gap: 30px;
+  max-width: 750px;
+  margin: auto 30px;
+  padding: 30px 40px;
+  background-color: var(--primaryContainer);
+  border-radius: 12px;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.titulo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin: 0px 0px 10px 0px;
+}
+
+.description {
+  display: flex;
+  flex: 3.5;
+  align-items: center;
+}
+
+.description p {
+  line-height: 110%;
+  font-size: 1.1em;
+  letter-spacing: 0.01em;
+}
+
+.cardlanguajes {
+  display: flex;
+  flex: 6;
+  background-color: var(--surface);
+  border-radius: 12px;
+  gap: 10px;
+  padding: 10px 0px;
+  border: 1px solid var(--outline);
+  color: var(--onSurface);
+}
+
+.languajesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 20px 10px;
+  flex: 1;
+  align-items: center;
+}
+
+.languajes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+}
+
+.separator {
+  margin: 10px 0;
+  width: 1px;
+  background-color: var(--outline);
+  border-radius: 1px;
+}
+
+.toolsContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 50px 0px;
+  }
+  .cardAbout {
+    display: flex;
+    flex-direction: column;
+    margin: auto 5px;
+    padding: 30px 5px;
+  }
+  .description p {
+    text-align: center;
+  }
+}
