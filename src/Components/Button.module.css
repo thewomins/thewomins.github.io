@@ -14,23 +14,23 @@
   aspect-ratio: 1 / 1;
 }
 
-.secundary{
+.secundary {
   background-color: var(--surface);
   outline: 1px solid var(--outline);
 }
-.secundary p{
-  color:var(--onSurface)
+.secundary p {
+  color: var(--onSurface);
 }
-.secundary .image:first-child{
+.secundary .image:first-child {
   color: var(--primary);
 }
 
 .primary {
   background-color: var(--primary);
 }
-.primary p{
-  color:var(--onPrimary)
+.primary p {
+  color: var(--onPrimary);
 }
-.primary .image:first-child{
+.primary .image:first-child {
   color: var(--onPrimary);
 }

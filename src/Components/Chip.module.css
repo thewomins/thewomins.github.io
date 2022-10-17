@@ -11,8 +11,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-.link{
-  cursor:pointer;
+.link {
+  cursor: pointer;
 }
 
 .chip p {
@@ -21,7 +21,7 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
-  color:var(--onSurface)
+  color: var(--onSurface);
 }
 
 .image {
@@ -30,8 +30,8 @@
   margin: auto 8px;
 }
 
-.image:first-child{
-  color:var(--primary);
+.image:first-child {
+  color: var(--primary);
 }
 
 .big {
