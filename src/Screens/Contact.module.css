@@ -1,0 +1,58 @@
+.contact {
+  padding: 10px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--secundaryContainer);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.cardContacts p {
+  margin: 0;
+  color: var(--onSecundaryContainer);
+}
+
+.redes {
+  display: flex;
+}
+
+.title {
+  font-size: 2rem;
+
+  letter-spacing: 0.01em;
+}
+
+.description {
+  padding: 0px 80px;
+  text-align: center;
+  line-height: 120%;
+  font-size: 1.1em;
+  letter-spacing: 0.01em;
+}
+
+.copy {
+  align-self: center;
+  margin: 20px;
+  color: var(--onBackground);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .contact {
+    padding: 10px 0px;
+  }
+  .cardContacts {
+    margin: 0px 5px;
+  }
+  .description {
+    padding: 0px 20px;
+  }
+}
