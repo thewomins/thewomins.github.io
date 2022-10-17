@@ -5,10 +5,34 @@
   padding: 0px 30px;
   background-color: transparent;
   transition: background-color 0.3s ease-out;
+  z-index: 1;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--outline);
+}
+
+.empresaContainer p {
+  color: var(--onSurface);
 }
 
 .empresaContainerActive {
-  background-color: blue;
+  background-color: var(--surface);
   border-radius: 12px 0px 0px 12px;
   transition: background-color 0.3s ease-in;
+}
+
+.empresaContainerActive p {
+  color: var(--onBackground);
+}
+
+@media only screen and (max-width: 700px) {
+  .empresaContainer {
+    height: 40px;
+    width: fit-content;
+    padding: 0px 16px;
+    border-width: 1px 1px 0px 1px;
+  }
+  .empresaContainerActive {
+    border-radius: 12px 12px 0px 0px;
+  }
 }
