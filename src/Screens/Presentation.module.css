@@ -6,8 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: var(--seed);
+  color: var(--onSeed);
   background-attachment: fixed;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--shadowTransparency);
 }
 
 .textConteiner {
