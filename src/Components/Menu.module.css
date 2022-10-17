@@ -2,8 +2,36 @@
   position: sticky;
   top: 0;
   display: flex;
-  background-color: red;
+  background-color: var(--seed);
   height: 60px;
   margin: auto 0;
   padding: 0 20px;
+  z-index: 100;
+  color: var(--onSeed);
+  justify-content: end;
+}
+
+.nightModeContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconNight {
+  height: 20px;
+  width: 20px;
+  color: var(--onSurface);
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  gap: 2px;
+}
+
+@media only screen and (max-width: 700px) {
+  .buttonsContainer {
+    opacity: 0;
+  }
 }
