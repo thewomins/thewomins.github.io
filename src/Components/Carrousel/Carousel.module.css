@@ -1,0 +1,115 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+.cardsContainer {
+  display: flex;
+  flex: 1;
+}
+
+.operadores {
+  cursor: pointer;
+  stroke: var(--outline);
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  color: var(--primary);
+  width: 80px;
+  margin: auto 10px;
+  z-index: 3;
+  transition: all 0.2s ease-out;
+}
+
+.operadores:hover {
+  transform: translateX(5px);
+  transition: all 0.2s ease-in;
+}
+
+.operadoresL {
+  stroke: var(--outline);
+  stroke-width: 1px;
+  width: 80px;
+  color: var(--primary);
+  margin: auto;
+  z-index: 3;
+  transform: rotate(-180deg);
+  transition: all 0.2s ease-out;
+}
+
+.operadoresL:hover {
+  transform: rotate(-180deg) translateX(5px);
+  transition: all 0.2s ease-in;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.cardCenter {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transform: scale(0.6);
+  transition: all 0.5s ease-in-out;
+}
+
+/*Carta en el medio*/
+.cardActive {
+  z-index: 3;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.4s ease-in;
+}
+
+/*Carta que sigue*/
+.cardAfter {
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(22%) scale(0.8);
+  transition: opacity transform 0.5s ease-out;
+}
+
+.cardBefore {
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(-22%) scale(0.8);
+  transition: opacity transform 0.5s ease-out;
+}
+
+.positionCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  margin: auto 0px;
+  gap: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  .carouselContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .cardsContainer {
+    margin: 0px 5px;
+  }
+  .operadores {
+    width: 50px;
+  }
+  .operadoresL {
+    width: 50px;
+  }
+  .cardBefore {
+    transform: translateX(-18%) scale(0.8);
+  }
+  .cardAfter {
+    transform: translateX(18%) scale(0.8);
+  }
+}
