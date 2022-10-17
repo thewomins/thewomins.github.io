@@ -1,0 +1,74 @@
+.cardExperience {
+  display: flex;
+  flex: 1;
+  max-width: 750px;
+  padding: 10px 50px;
+  min-height: 250px;
+}
+
+.empresasContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transform: translateY(-1px);
+}
+
+.info {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--surface);
+  gap: 4px;
+
+  outline: 1px solid var(--outline);
+  border-radius: 0px 12px 12px 0px;
+}
+
+/*@keyframes mymove {
+    0% {opacity: 0;transform: translateX(-100px); }
+    100% {opacity: 1;transform: translateX(0px); }
+  }*/
+
+.info p {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  font-weight: 600;
+  font-size: 1.375em;
+  color: var(--onSurface);
+}
+
+.company {
+  color: var(--onSurface);
+}
+
+.dates {
+  display: flex;
+  color: var(--outline);
+  font-size: 1em;
+}
+
+.hechosContaner {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  margin: 0;
+  gap: 10px;
+  font-size: 1.125em;
+  color: var(--onSecundaryContainer);
+}
+
+@media only screen and (max-width: 700px) {
+  .cardExperience {
+    padding: 10px 10px;
+    flex-direction: column;
+  }
+  .empresasContainer {
+    flex-direction: row;
+    max-height: 41px;
+    transform: translateX(-1px);
+  }
+}
