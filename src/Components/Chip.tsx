@@ -1,38 +1,45 @@
-import React, {Ref, useImperativeHandle, useState} from "react";
-import {refChip} from "../types/types";
+import React, {useEffect, useState} from "react";
 import styles from "./Chip.module.css";
 
 type props = {
   big?: boolean;
   text: string;
+  onlyIcon?: boolean;
   icon?: any;
   onClickChip?: any;
 };
 
 // eslint-disable-next-line react/display-name
-const Chip = React.forwardRef(
-  ({big = false, text, icon, onClickChip}: props, ref: Ref<refChip>) => {
-    const [showLabel, setShowLabel] = useState(true);
+const Chip: React.FC<props> = ({
+  big = false,
+  text,
+  icon,
+  onlyIcon = false,
+  onClickChip,
+}) => {
+  const [showIcon, setShowIcon] = useState(onlyIcon);
 
-    useImperativeHandle(ref, () => ({
-      setLabel: (showLabel: boolean) => {
-        setShowLabel(showLabel);
-      },
-      labelShow: showLabel,
-    }));
+  const onMouseEnter = () => {
+    setShowIcon(false);
+  };
 
-    return (
-      <div
-        className={`${styles.chip} ${big ? styles.big : ""} ${
-          showLabel ? "" : styles.noLabel
-        }`}
-        onClick={() => onClickChip()}
-      >
-        <div className={styles.image}>{icon}</div>
-        <p>{text}</p>
-      </div>
-    );
-  },
-);
+  const onMouseLeave = () => {
+    setShowIcon(true);
+  };
+
+  return (
+    <div
+      className={`${styles.chip} ${
+        showIcon && onlyIcon ? styles.noLabel : ""
+      } ${big ? styles.big : ""} ${onClickChip ? styles.link : ""}`}
+      onMouseEnter={() => onMouseEnter()}
+      onMouseLeave={() => onMouseLeave()}
+      onClick={onClickChip}
+    >
+      <div className={styles.image}>{icon}</div>
+      <p>{text}</p>
+    </div>
+  );
+};
 
 export default Chip;

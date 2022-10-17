@@ -4,11 +4,15 @@
   width: auto;
   align-items: center;
   justify-content: center;
-  background-color: #fffbff;
+  background-color: var(--surface);
   padding-right: 16px;
   border-radius: 8px;
-  border: 1px solid #79767e;
+  border: 1px solid var(--outline);
   transition: all 0.3s ease-in-out;
+}
+
+.link{
+  cursor:pointer;
 }
 
 .chip p {
@@ -17,12 +21,17 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  color:var(--onSurface)
 }
 
 .image {
-  height: 18px;
-  aspect-ratio: 1 / 1;
+  height: 22px;
+  width: 22px;
   margin: auto 8px;
+}
+
+.image:first-child{
+  color:var(--primary);
 }
 
 .big {
@@ -30,13 +39,13 @@
 }
 
 .big .image {
-  height: 32px;
-  aspect-ratio: 1 / 1;
+  height: 36px;
+  width: 36px;
   margin: auto 8px;
 }
 
 .big p {
-  font-size: 1.37rem;
+  font-size: 1.3rem;
 }
 
 /* ONLY ICON */
@@ -44,6 +53,7 @@
 .noLabel {
   background-color: transparent;
   border: 1px solid transparent;
+  padding-right: 0px;
   transition: all 0.3s ease-out;
 }
 
