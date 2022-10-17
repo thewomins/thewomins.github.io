@@ -1,0 +1,22 @@
+.works {
+  padding: 40px 150px 60px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--background2);
+}
+
+.experienceContainer {
+  display: flex;
+  padding: 0 60px;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .works {
+    padding: 40px 0px 60px 0px;
+  }
+  .experienceContainer {
+    padding: 0 5px;
+  }
+}
