@@ -9,8 +9,8 @@ const data: TWork = {
     fechaInicio: "08/2022",
     fechaTermino: "10/2022",
     hechos: [
-      "Developed new features and manteined code for the mobile aplication",
-      "Worked with React Native Using Typescript",
+      "Desarrollé nuevas funcionalidades y mejoras a la aplicacion móvil",
+      "Trabajé con React Native utilizando Typescript",
     ],
   },
 };
