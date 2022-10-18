@@ -9,6 +9,7 @@
   border-width: 1px 0px 1px 1px;
   border-style: solid;
   border-color: var(--outline);
+  cursor: pointer;
 }
 
 .empresaContainer p {

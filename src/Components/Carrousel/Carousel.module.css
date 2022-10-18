@@ -99,6 +99,8 @@
   }
   .cardsContainer {
     margin: 0px 5px;
+    height: fit-content;
+    overflow: hidden;
   }
   .operadores {
     width: 50px;

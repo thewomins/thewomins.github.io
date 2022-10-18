@@ -66,3 +66,32 @@
   margin: 0;
   transition: all 0.3s ease-in-out;
 }
+
+@media only screen and (max-width: 700px) {
+  .chip {
+    height: 24;
+    padding-right: 8px;
+    border-radius: 6px;
+  }
+  .chip p {
+    font-size: 0.8em;
+  }
+  .image {
+    height: 18px;
+    width: 18px;
+    margin: auto 4px;
+  }
+  .big {
+    height: 32px;
+  }
+  
+  .big .image {
+    height: 22px;
+    width: 22px;
+    margin: auto 4px;
+  }
+  
+  .big p {
+    font-size: 1rem;
+  }
+}

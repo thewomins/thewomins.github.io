@@ -9,6 +9,11 @@
   border-radius: 20px;
 }
 
+.button p {
+  font-size: 1em;
+  margin: 0;
+}
+
 .image {
   height: 22px;
   aspect-ratio: 1 / 1;
@@ -33,4 +38,21 @@
 }
 .primary .image:first-child {
   color: var(--onPrimary);
+}
+
+@media only screen and (max-width: 700px) {
+  .button {
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 16px;
+    gap: 4px;
+    border-radius: 16px;
+  }
+  
+  .image {
+    height: 18px;
+  }
+  .button p {
+    font-size: 0.8em;
+  }
 }
