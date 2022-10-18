@@ -84,13 +84,13 @@
   .big {
     height: 32px;
   }
-  
+
   .big .image {
     height: 22px;
     width: 22px;
     margin: auto 4px;
   }
-  
+
   .big p {
     font-size: 1rem;
   }
