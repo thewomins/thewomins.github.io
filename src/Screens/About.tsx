@@ -6,7 +6,7 @@ import {TIcons} from "src/types/types";
 import React from "react";
 
 const datos = {
-  lenguajes: ["Python", "TypeScript", "JavaScript", "Go", "Java", "C#", "SQL"],
+  lenguajes: ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL"],
   frameworks: [
     "React",
     "React Native",
