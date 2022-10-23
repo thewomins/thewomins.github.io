@@ -8,7 +8,7 @@
   padding: 0 20px;
   z-index: 100;
   color: var(--onSeed);
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .nightModeContainer {
