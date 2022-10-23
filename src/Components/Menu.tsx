@@ -21,7 +21,7 @@ const Menu: React.FC<props> = ({state, onChangeCheck, screens}) => {
       </div>
       <div className={styles.nightModeContainer}>
         <MdModeNight className={styles.iconNight} />
-        <Switch state={state} onChangeCheck={onChangeCheck} />
+        <Switch state={state} onChangeCheck={(e) => onChangeCheck(e)} />
       </div>
     </div>
   );

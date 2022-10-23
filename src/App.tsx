@@ -41,7 +41,7 @@ function App() {
     <div>
       <Menu
         screens={["Acerca de", "Experiencia", "Proyectos", "Contacto"]}
-        state={theme === "dark" ? false : true}
+        state={theme === "dark" ? true : false}
         onChangeCheck={onChangeCheck}
       />
       <Presentation />
