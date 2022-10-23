@@ -21,14 +21,17 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const changeTheme = (nightMode: boolean) => {
+      dispatchTheme({
+        type: "changeThemeTo",
+        themeName: nightMode ? "dark" : "light",
+      });
+    };
     const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
-    darkMode.addEventListener("change", (e) => {
-      if (e.matches) {
-        dispatchTheme({type: "changeThemeTo", themeName: "dark"});
-      } else {
-        dispatchTheme({type: "changeThemeTo", themeName: "light"});
-      }
-    });
+    darkMode.addEventListener("change", (e) => changeTheme(e.matches));
+    return window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .removeEventListener("change", (e) => changeTheme(e.matches));
   }, []);
 
   const onChangeCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
