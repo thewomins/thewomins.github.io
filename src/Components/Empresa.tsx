@@ -3,7 +3,7 @@ import styles from "./Empresa.module.css";
 
 type props = {
   text: string;
-  onClickEmpresa: ()=>void;
+  onClickEmpresa: () => void;
   active: boolean;
 };
 

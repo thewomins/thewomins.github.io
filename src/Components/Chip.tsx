@@ -6,7 +6,7 @@ type props = {
   text: string;
   onlyIcon?: boolean;
   icon?: React.ReactNode;
-  onClickChip?: ()=>void;
+  onClickChip?: () => void;
 };
 
 // eslint-disable-next-line react/display-name

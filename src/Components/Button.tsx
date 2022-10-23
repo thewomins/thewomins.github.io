@@ -5,7 +5,7 @@ type props = {
   primary?: boolean;
   icon?: React.ReactNode;
   text: string;
-  onClick?: ()=>void;
+  onClick?: () => void;
 };
 
 const Button: React.FC<props> = ({primary = false, onClick, text, icon}) => {

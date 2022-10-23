@@ -10,7 +10,6 @@ type props = {
 const Experience: React.FC<props> = ({data}) => {
   const [keyToShow, setKeyToShow] = useState(Object.keys(data)[0]);
 
-
   const onClickEmpresa = (key: string) => {
     //console.log("click ", key);
     setKeyToShow(key);
@@ -20,14 +19,13 @@ const Experience: React.FC<props> = ({data}) => {
     <div className={styles.cardExperience}>
       <div className={styles.empresasContainer}>
         {Object.entries(data).map(([key, value], i) => (
-            <Empresa
-              text={key}
-              onClickEmpresa={() => onClickEmpresa(key)}
-              key={i}
-              active={key === keyToShow ? true : false}
-            />
-          )
-        )}
+          <Empresa
+            text={key}
+            onClickEmpresa={() => onClickEmpresa(key)}
+            key={i}
+            active={key === keyToShow ? true : false}
+          />
+        ))}
       </div>
       <div className={styles.info}>
         <div className={styles.title}>
