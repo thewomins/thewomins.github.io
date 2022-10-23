@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import styles from "./Menu.module.css";
 import {MdModeNight} from "react-icons/md";
 import Switch from "./Switch";
@@ -7,7 +7,7 @@ import {TScreens} from "src/types/types";
 
 type props = {
   state: boolean;
-  onChangeCheck: any;
+  onChangeCheck: (e: React.ChangeEvent<HTMLInputElement>) => void;
   screens: TScreens[];
 };
 

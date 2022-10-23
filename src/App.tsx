@@ -6,29 +6,32 @@ import Work from "./Screens/Work";
 import Proyects from "./Screens/Proyects";
 import Contact from "./Screens/Contact";
 import {useTheme} from "./hooks/Theme";
-import {useLayoutEffect, useRef} from "react";
+import {useEffect, useLayoutEffect} from "react";
 
 function App() {
   const {theme, dispatchTheme} = useTheme();
 
   useLayoutEffect(() => {
-    //dispatchTheme({type:"changeThemeTo", themeName: "dark"});
-    const modeMe = (e: any) => {
-      dispatchTheme({
-        type: "changeThemeTo",
-        themeName: e.matches ? "dark" : "light",
-      });
-    };
-    modeMe(window.matchMedia("(prefers-color-scheme: dark)"));
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", modeMe);
-    return window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .removeEventListener("change", modeMe);
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      dispatchTheme({type: "changeThemeTo", themeName: "dark"});
+    }
   }, []);
 
-  const onChangeCheck = (event: any) => {
+  useEffect(() => {
+    const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+    darkMode.addEventListener("change", (e) => {
+      if (e.matches) {
+        dispatchTheme({type: "changeThemeTo", themeName: "dark"});
+      } else {
+        dispatchTheme({type: "changeThemeTo", themeName: "light"});
+      }
+    });
+  }, []);
+
+  const onChangeCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatchTheme({
       type: "changeThemeTo",
       themeName: event.target.checked ? "dark" : "light",
