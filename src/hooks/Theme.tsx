@@ -1,4 +1,4 @@
-import React, {useContext, useReducer} from "react";
+import React, {useContext, useEffect, useReducer} from "react";
 import {reducerActionTheme, TTheme, TThemesAvailable} from "src/types/types";
 
 const themes: {[Key in TThemesAvailable]: TTheme} = {
@@ -79,7 +79,6 @@ function setTheme(Theme: TTheme) {
 const reducer = (state: TThemesAvailable, action: reducerActionTheme) => {
   switch (action.type) {
     case "changeThemeTo":
-      setTheme(themes[action.themeName]);
       return action.themeName;
     default:
       throw new Error();
@@ -108,6 +107,11 @@ const ThemeContextProvider: React.FC<{children: React.ReactNode}> = ({
 
 const useTheme = () => {
   const {theme = initialState, dispatchTheme} = useContext(ThemeContext);
+
+  useEffect(() => {
+    setTheme(themes[theme]);
+  }, [theme]);
+
   return {theme, dispatchTheme};
 };
 
