@@ -3,7 +3,7 @@ import styles from "./Switch.module.css";
 
 type props = {
   state: boolean;
-  onChangeCheck: any;
+  onChangeCheck: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const Switch: React.FC<props> = ({state, onChangeCheck}) => {
@@ -11,8 +11,8 @@ const Switch: React.FC<props> = ({state, onChangeCheck}) => {
     <label className={styles.switch}>
       <input
         type={"checkbox"}
-        onChange={(e: any) => onChangeCheck(e)}
-        defaultChecked={state}
+        onChange={(e) => onChangeCheck(e)}
+        checked={state}
       />
       <span className={styles.slider}></span>
     </label>
