@@ -3,9 +3,9 @@ import styles from "./Button.module.css";
 
 type props = {
   primary?: boolean;
-  icon?: any;
+  icon?: React.ReactNode;
   text: string;
-  onClick?: any;
+  onClick?: ()=>void;
 };
 
 const Button: React.FC<props> = ({primary = false, onClick, text, icon}) => {
@@ -14,7 +14,7 @@ const Button: React.FC<props> = ({primary = false, onClick, text, icon}) => {
       className={`${styles.button} ${
         primary ? styles.primary : styles.secundary
       }`}
-      onClick={() => onClick()}
+      onClick={onClick}
     >
       <div className={styles.image}>{icon}</div>
       <p>{text}</p>

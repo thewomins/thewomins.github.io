@@ -23,10 +23,6 @@ const Carousel: React.FC<props> = ({proyects}) => {
   });
 
   useEffect(() => {
-    console.log("cardOrder", cardOrder);
-  }, [cardOrder]);
-
-  useEffect(() => {
     setStyle(1);
   });
 
@@ -37,7 +33,6 @@ const Carousel: React.FC<props> = ({proyects}) => {
     minNumber = 0,
   ) => {
     const calc = base + number;
-    console.log("calc", calc);
     if (calc > maxNumber || calc < minNumber) return undefined;
     return calc;
   };

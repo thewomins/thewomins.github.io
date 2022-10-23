@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {TWork} from "src/types/types";
 import Empresa from "./Empresa";
 import styles from "./Experience.module.css";
@@ -10,31 +10,24 @@ type props = {
 const Experience: React.FC<props> = ({data}) => {
   const [keyToShow, setKeyToShow] = useState(Object.keys(data)[0]);
 
-  useEffect(() => {
-    console.log("ket to show: ", keyToShow);
-  }, [keyToShow]);
 
   const onClickEmpresa = (key: string) => {
-    console.log("click ", key);
+    //console.log("click ", key);
     setKeyToShow(key);
   };
 
   return (
     <div className={styles.cardExperience}>
       <div className={styles.empresasContainer}>
-        {Object.entries(data).map(([key, value], i) => {
-          console.log("key", key);
-          console.log("value", value);
-          console.log("i", i);
-          return (
+        {Object.entries(data).map(([key, value], i) => (
             <Empresa
               text={key}
               onClickEmpresa={() => onClickEmpresa(key)}
               key={i}
               active={key === keyToShow ? true : false}
             />
-          );
-        })}
+          )
+        )}
       </div>
       <div className={styles.info}>
         <div className={styles.title}>

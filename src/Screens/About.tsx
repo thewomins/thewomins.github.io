@@ -1,6 +1,5 @@
 import Chip from "../Components/Chip";
 import styles from "./About.module.css";
-import {ReactComponent as Email} from "./../assets/icons/Email.svg";
 import {getIcon} from "src/utils/Icons";
 import {TIcons} from "src/types/types";
 import React from "react";

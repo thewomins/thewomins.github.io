@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import styles from "./Chip.module.css";
 
 type props = {
   big?: boolean;
   text: string;
   onlyIcon?: boolean;
-  icon?: any;
-  onClickChip?: any;
+  icon?: React.ReactNode;
+  onClickChip?: ()=>void;
 };
 
 // eslint-disable-next-line react/display-name

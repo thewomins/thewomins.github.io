@@ -7,7 +7,7 @@ import styles from "./CardCarousel.module.css";
 
 type props = {
   proyecto: TProyect;
-  style?: any;
+  style?: string;
   focus?: boolean;
 };
 
