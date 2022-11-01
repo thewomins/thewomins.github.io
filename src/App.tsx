@@ -2,7 +2,7 @@ import "./App.css";
 import Menu from "./Components/Menu";
 import Presentation from "./Screens/Presentation";
 import About from "./Screens/About";
-import Work from "./Screens/Work";
+//import Work from "./Screens/Work";
 import Proyects from "./Screens/Proyects";
 import Contact from "./Screens/Contact";
 import {useTheme} from "./hooks/Theme";
@@ -43,13 +43,13 @@ function App() {
   return (
     <div>
       <Menu
-        screens={["Acerca de", "Experiencia", "Proyectos", "Contacto"]}
+        screens={["Acerca de", "Proyectos", "Contacto"]}
         state={theme === "dark" ? true : false}
         onChangeCheck={onChangeCheck}
       />
       <Presentation />
       <About />
-      <Work />
+      {/*<Work />*/}
       <Proyects />
       <Contact />
     </div>

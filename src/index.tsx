@@ -5,6 +5,8 @@ import App from "./App";
 import {ThemeContextProvider} from "./hooks/Theme";
 //import reportWebVitals from "./reportWebVitals";
 
+//yarn deploy -- -m "Your custom message"
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
