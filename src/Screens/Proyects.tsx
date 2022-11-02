@@ -27,7 +27,7 @@ const data: TProyect[] = [
   {
     nombreProyecto: "Promedio Ponderado",
     imagen: require("src/assets/captura_prog2.jpg"),
-    lenguajes: ["Java", "React"],
+    lenguajes: ["Java"],
     description:
       "Programa para calcular el promedio ponderado de multiples calificaciones. Disponible en Google play store",
     links: {
