@@ -63,6 +63,8 @@ export type reducerActionTheme = {
 
 export type TScreens = "Acerca de" | "Experiencia" | "Proyectos" | "Contacto";
 
+export type Languages = "Español" | "English";
+
 export type TIcons =
   | "Email"
   | "GitHub"
