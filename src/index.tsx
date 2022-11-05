@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import {ThemeContextProvider} from "./hooks/Theme";
+import {LanguageContextProvider} from "./hooks/Language";
 //import reportWebVitals from "./reportWebVitals";
 
 //yarn deploy -- -m "Your custom message"
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <App />
+      <LanguageContextProvider>
+        <App />
+      </LanguageContextProvider>
     </ThemeContextProvider>
   </React.StrictMode>,
 );
