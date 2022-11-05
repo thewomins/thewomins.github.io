@@ -7,14 +7,22 @@
   margin: auto 0;
   padding: 0 20px;
   z-index: 100;
+  gap: 10px;
   color: var(--onSeed);
-  justify-content: flex-end;
 }
 
 .nightModeContainer {
   display: flex;
   align-items: center;
+  margin: auto 0px;
   gap: 5px;
+}
+
+.languajeSelectorContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: auto 0px;
 }
 
 .iconNight {
@@ -26,12 +34,16 @@
 .buttonsContainer {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin: auto;
   gap: 2px;
 }
 
 @media only screen and (max-width: 700px) {
   .buttonsContainer {
+    display: none;
     opacity: 0;
+  }
+  .menu {
+    justify-content: flex-end;
   }
 }
