@@ -7,9 +7,25 @@ import Proyects from "./Screens/Proyects";
 import Contact from "./Screens/Contact";
 import {useTheme} from "./hooks/Theme";
 import {useEffect, useLayoutEffect} from "react";
+import {useLanguage} from "./hooks/Language";
+import {Languages, TScreens} from "./types/types";
+import {dictLanguage} from "./utils/dict";
 
 function App() {
   const {theme, dispatchTheme} = useTheme();
+  const {
+    Language: {text},
+    dispatchLanguage,
+  } = useLanguage();
+
+  const getLanguageBrowser = (): Languages => {
+    let userLang = navigator.language;
+    userLang = userLang.split("-")[0];
+    if (userLang === "es" || userLang === "en") {
+      return dictLanguage[userLang];
+    }
+    return dictLanguage.en;
+  };
 
   useLayoutEffect(() => {
     if (
@@ -18,6 +34,10 @@ function App() {
     ) {
       dispatchTheme({type: "changeThemeTo", themeName: "dark"});
     }
+  }, []);
+
+  useEffect(() => {
+    dispatchLanguage({type: "setLanguage", Language: getLanguageBrowser()});
   }, []);
 
   useEffect(() => {
@@ -43,7 +63,11 @@ function App() {
   return (
     <div>
       <Menu
-        screens={["Acerca de", "Proyectos", "Contacto"]}
+        screens={[
+          text.acercaDe as TScreens,
+          text.proyectos as TScreens,
+          text.contacto as TScreens,
+        ]}
         state={theme === "dark" ? true : false}
         onChangeCheck={onChangeCheck}
       />
