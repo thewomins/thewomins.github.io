@@ -1,4 +1,5 @@
 import React from "react";
+import {useLanguage} from "src/hooks/Language";
 import {TProyect} from "src/types/types";
 import Carousel from "../Components/Carrousel/Carousel";
 import styles from "./Proyects.module.css";
@@ -48,10 +49,13 @@ const data: TProyect[] = [
   },
 ];
 const Proyects: React.FC = () => {
+  const {
+    Language: {text},
+  } = useLanguage();
   return (
     <div id="Proyectos" className={styles.proyects}>
       <div className="titleContainer">
-        <p className="titles">3. Proyectos</p>
+        <p className="titles">{text.proyectsTitulo}</p>
         <div className="line" />
       </div>
       <div className={styles.proyectsContainer}>

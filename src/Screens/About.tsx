@@ -3,6 +3,7 @@ import styles from "./About.module.css";
 import {getIcon} from "src/utils/Icons";
 import {TIcons} from "src/types/types";
 import React from "react";
+import {useLanguage} from "src/hooks/Language";
 
 const datos = {
   lenguajes: ["Python", "TypeScript", "JavaScript", "Java", "C#", "SQL"],
@@ -17,24 +18,23 @@ const datos = {
 };
 
 const About: React.FC = () => {
+  const {
+    Language: {text},
+  } = useLanguage();
+
   return (
     <div id="Acerca de" className={styles.container}>
       <div className="titleContainer">
-        <p className="titles">1. Acerca de</p>
+        <p className="titles">{text.aboutTitulo}</p>
         <div className="line" />
       </div>
       <div className={styles.cardAbout}>
         <div className={styles.description}>
-          <p>
-            Analista programador titulado de CFT Inacap con 3 meses de
-            experiencia en el desarrollo de software. Buscando probar mis
-            habilidades, apasionado por la tecnología y siempre buscando mejorar
-            mis habilidades.
-          </p>
+          <p>{text.aboutDescripcion}</p>
         </div>
         <div className={styles.cardlanguajes}>
           <div className={styles.languajesContainer}>
-            <p className={styles.titulo}> Lenguajes de programación </p>
+            <p className={styles.titulo}> {text.aboutTituloLenguajes} </p>
             <div className={styles.languajes}>
               {/*Chips languajes here */}
               {datos.lenguajes.map((lenguaje, i) => (
@@ -48,10 +48,7 @@ const About: React.FC = () => {
           </div>
           <div className={styles.separator} />
           <div className={styles.toolsContainer}>
-            <p className={styles.titulo}>
-              {" "}
-              Librerias, Frameworks, Herramientas{" "}
-            </p>
+            <p className={styles.titulo}>{text.aboutTituloFrameworks}</p>
             <div className={styles.tools}>
               {/*Chips frameworks, libraries, tools here */}
               {datos.frameworks.map((frameworks, i) => (
