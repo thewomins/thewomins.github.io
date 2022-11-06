@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7aaf4816.css",
-    "main.js": "/static/js/main.062db4f9.js",
+    "main.css": "/static/css/main.aebeaa56.css",
+    "main.js": "/static/js/main.eac51c53.js",
     "static/media/captura_prog2.jpg": "/static/media/captura_prog2.c67aeeb695faad6c2837.jpg",
     "static/media/captura_prog1.JPG": "/static/media/captura_prog1.ed8225f75e4c3b9b68c1.JPG",
     "static/media/tren.png": "/static/media/tren.9ca62d06a8c86a9628bf.png",
@@ -31,11 +31,11 @@
     "static/media/Next.svg": "/static/media/Next.b203ac57f7c99fe6da86ae4357cee402.svg",
     "static/media/Email.svg": "/static/media/Email.3978ed0152fa30b5c885b79207d00ffd.svg",
     "static/media/Fast Api.svg": "/static/media/Fast Api.00d2dc3a718c6a63a83068041d1f27eb.svg",
-    "main.7aaf4816.css.map": "/static/css/main.7aaf4816.css.map",
-    "main.062db4f9.js.map": "/static/js/main.062db4f9.js.map"
+    "main.aebeaa56.css.map": "/static/css/main.aebeaa56.css.map",
+    "main.eac51c53.js.map": "/static/js/main.eac51c53.js.map"
   },
   "entrypoints": [
-    "static/css/main.7aaf4816.css",
-    "static/js/main.062db4f9.js"
+    "static/css/main.aebeaa56.css",
+    "static/js/main.eac51c53.js"
   ]
 }
