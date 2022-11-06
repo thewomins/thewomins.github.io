@@ -8,7 +8,7 @@ import Contact from "./Screens/Contact";
 import {useTheme} from "./hooks/Theme";
 import {useEffect, useLayoutEffect} from "react";
 import {useLanguage} from "./hooks/Language";
-import {Languages, TScreens} from "./types/types";
+import {Languages} from "./types/types";
 import {dictLanguage} from "./utils/dict";
 
 function App() {
@@ -63,11 +63,11 @@ function App() {
   return (
     <div>
       <Menu
-        screens={[
-          text.acercaDe as TScreens,
-          text.proyectos as TScreens,
-          text.contacto as TScreens,
-        ]}
+        screens={{
+          "Acerca de": text.acercaDe,
+          Proyectos: text.proyectos,
+          Contacto: text.contacto,
+        }}
         state={theme === "dark" ? true : false}
         onChangeCheck={onChangeCheck}
       />

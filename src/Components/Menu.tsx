@@ -1,30 +1,32 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import styles from "./Menu.module.css";
 import {MdModeNight} from "react-icons/md";
 import Switch from "./Switch";
 import ButtonMenu from "./ButtonMenu";
-import {Languages, TScreens} from "src/types/types";
+import {TScreens} from "src/types/types";
 import LanguajeSelector from "./LanguajeSelector";
 import {useLanguage} from "src/hooks/Language";
 
 type props = {
   state: boolean;
   onChangeCheck: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  screens: TScreens[];
+  screens: TScreens;
 };
 
 const Menu: React.FC<props> = ({state, onChangeCheck, screens}) => {
-  const {Language} = useLanguage();
+  const {
+    Language: {language},
+  } = useLanguage();
 
   useEffect(() => {
-    console.log(Language);
-  }, [Language]);
+    console.log(language);
+  }, [language]);
 
   return (
     <div className={styles.menu}>
       <div className={styles.buttonsContainer}>
-        {screens.map((key, i) => (
-          <ButtonMenu key={i} text={key} to={key} />
+        {Object.entries(screens).map(([key, value], i) => (
+          <ButtonMenu key={i} text={value} to={key} />
         ))}
       </div>
       <div className={styles.nightModeContainer}>
@@ -33,7 +35,7 @@ const Menu: React.FC<props> = ({state, onChangeCheck, screens}) => {
       </div>
       <div className={styles.languajeSelectorContainer}>
         <LanguajeSelector
-          language={Language.language}
+          language={language}
           languageList={["Español", "English"]}
         />
       </div>

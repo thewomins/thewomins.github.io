@@ -9,6 +9,7 @@ type props = {
 };
 
 const ButtonMenu: React.FC<props> = ({to, text}) => {
+  console.log(to, text);
   return (
     <Link
       to={to}
