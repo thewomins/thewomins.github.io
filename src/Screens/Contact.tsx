@@ -4,24 +4,25 @@ import {ReactComponent as GitHub} from "./../assets/icons/GitHub.svg";
 import {ReactComponent as LinkedIn} from "./../assets/icons/LinkedIn.svg";
 import {getIcon} from "src/utils/Icons";
 import React from "react";
+import {useLanguage} from "src/hooks/Language";
 
 const onClickChip = (link: string) => {
   window.open(link, "_blank", "noopener,noreferrer");
 };
 const Contact: React.FC = () => {
+  const {
+    Language: {text},
+  } = useLanguage();
+
   return (
     <div id="Contacto" className={styles.contact}>
       <div className="titleContainer">
-        <p className="titles">4. Contacto</p>
+        <p className="titles">{text.contactoTitulo}</p>
         <div className="line" />
       </div>
       <div className={styles.cardContacts}>
-        <p className={styles.title}>¡Trabajemos juntos!</p>
-        <p className={styles.description}>
-          Si te gustaron mis proyectos y tienes una idea de sitio web o
-          aplicación movíl, sintete libre de contactarme, mi inbox esta siempre
-          abierto. Cualquier pregunta es bienvenida.
-        </p>
+        <p className={styles.title}>{text.contactoSubTitulo}</p>
+        <p className={styles.description}>{text.contactoDescripcion}</p>
         <div className={styles.chipContainer}>
           <Chip
             icon={getIcon("Email", "icon")}
@@ -55,7 +56,7 @@ const Contact: React.FC = () => {
         href="https://github.com/thewomins/thewomins.github.io"
         className={styles.copy}
       >
-        © Diseñado y hecho por Felipe Urrutia
+        {text.contactoCopy}
       </a>
     </div>
   );

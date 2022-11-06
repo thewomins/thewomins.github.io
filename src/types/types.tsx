@@ -61,7 +61,14 @@ export type reducerActionTheme = {
   themeName: TThemesAvailable;
 };
 
-export type TScreens = "Acerca de" | "Experiencia" | "Proyectos" | "Contacto";
+export type TScreens = {
+  "Acerca de": string;
+  //Experiencia: string;
+  Proyectos: string;
+  Contacto: string;
+};
+
+export type Languages = "Español" | "English";
 
 export type TIcons =
   | "Email"

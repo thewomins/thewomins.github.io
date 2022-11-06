@@ -1,12 +1,17 @@
+import {useLanguage} from "src/hooks/Language";
 import styles from "./Presentation.module.css";
 
 function Presentation() {
+  const {
+    Language: {text},
+  } = useLanguage();
+
   return (
     <div className={styles.presentation}>
       <div className={styles.textConteiner}>
-        <p className={styles.small}>Hola, mi nombre es</p>
-        <p className={styles.big}>Felipe Urrutia</p>
-        <p className={styles.medium}>Desarrollador Full-stack</p>
+        <p className={styles.small}>{text.presentacionPrimero}</p>
+        <p className={styles.big}>{text.presentacionNombre}</p>
+        <p className={styles.medium}>{text.presentacionCargo}</p>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import {useLanguage} from "src/hooks/Language";
 import {getIcon} from "src/utils/Icons";
 import {TIcons, TProyect} from "../../types/types";
 import Button from "../Button";
@@ -19,6 +20,10 @@ const CardCarousel: React.FC<props> = ({
   const onClickButton = (link: string) => {
     window.open(link, "_blank", "noopener,noreferrer");
   };
+
+  const {
+    Language: {text},
+  } = useLanguage();
 
   return (
     <div className={`${styles.cardCarrousel} ${style}`}>
@@ -45,7 +50,9 @@ const CardCarousel: React.FC<props> = ({
             <Button
               key={i}
               text={
-                key.includes("GitHub") ? key.replace("GitHub", "Código") : key
+                key.includes("GitHub")
+                  ? key.replace("GitHub", text.codigo)
+                  : key
               }
               icon={getIcon(key as TIcons, "icon")}
               primary={i === 0}
